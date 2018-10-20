@@ -1,0 +1,91 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.ovz.codigobarras": {
+        "source": {
+            "type": "local",
+            "path": "../cordova-plugin-hello-swift"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.msopentech.websql": {
+        "source": {
+            "type": "local",
+            "path": "../Plugins/com.msopentech.websql"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-console": {
+        "source": {
+            "type": "local",
+            "path": "../Plugins/cordova-plugin-console"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-transport-security": {
+        "source": {
+            "type": "local",
+            "path": "../Plugins/cordova-plugin-transport-security"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "local",
+            "path": "../Plugins/org.apache.cordova.device"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.dialogs": {
+        "source": {
+            "type": "local",
+            "path": "../Plugins/org.apache.cordova.dialogs"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.statusbar": {
+        "source": {
+            "type": "local",
+            "path": "../Plugins/org.apache.cordova.statusbar"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "phonegap-plugin-barcodescanner": {
+        "source": {
+            "type": "local",
+            "path": "../Plugins/phonegap-plugin-barcodescanner"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "hu.dpal.phonegap.plugins.UniqueDeviceID": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Paldom/UniqueDeviceID.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device-name": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device-name"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

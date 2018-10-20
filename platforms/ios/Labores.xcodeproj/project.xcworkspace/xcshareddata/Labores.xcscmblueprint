@@ -1,0 +1,55 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9e52554e-2fce-4843-a605-7973da901c44++3335+++B215C47",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "9e52554e-2fce-4843-a605-7973da901c44++5565+++1CACD87" : {
+
+    },
+    "9e52554e-2fce-4843-a605-7973da901c44++5565+++7A27EC6" : {
+
+    },
+    "9e52554e-2fce-4843-a605-7973da901c44++3335+++B215C47" : {
+
+    },
+    "9e52554e-2fce-4843-a605-7973da901c44++3335+++588DC2A" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9e52554e-2fce-4843-a605-7973da901c44++5565+++1CACD87" : 0,
+    "9e52554e-2fce-4843-a605-7973da901c44++5565+++7A27EC6" : 0,
+    "9e52554e-2fce-4843-a605-7973da901c44++3335+++B215C47" : 9223372036854775807,
+    "9e52554e-2fce-4843-a605-7973da901c44++3335+++588DC2A" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C91C0CF7-8240-48AB-8739-4C3BE1EC1978",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9e52554e-2fce-4843-a605-7973da901c44++5565+++1CACD87" : "Movil_Labores_IOS_MAC\/",
+    "9e52554e-2fce-4843-a605-7973da901c44++5565+++7A27EC6" : "Movil_Labores_IOS_MAC\/",
+    "9e52554e-2fce-4843-a605-7973da901c44++3335+++B215C47" : "AAA_Repo\/",
+    "9e52554e-2fce-4843-a605-7973da901c44++3335+++588DC2A" : "ALA_Apuntes_Labores\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Labores",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "platforms\/ios\/Labores.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/isaws02.nsel-clnsa.com.ni:85\/svn\/SER_Sites",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9e52554e-2fce-4843-a605-7973da901c44++3335+++588DC2A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/isaws02.nsel-clnsa.com.ni:85\/svn\/SER_Sites",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9e52554e-2fce-4843-a605-7973da901c44++3335+++B215C47"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/isaws02.nsel-clnsa.com.ni:85\/svn\/SER_Sites",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9e52554e-2fce-4843-a605-7973da901c44++5565+++1CACD87"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/isaws02.nsel-clnsa.com.ni:85\/svn\/SER_Sites",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9e52554e-2fce-4843-a605-7973da901c44++5565+++7A27EC6"
+    }
+  ]
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+            <meta name="format-detection" content="telephone=no">
+                <title>AAAMovil</title>
+                
+                <!-- AAAMovil references -->
+                <link href="css/SHD_Reset.css" rel="stylesheet" />
+                <link href="css/index.css" rel="stylesheet" />
+                <link href="css/animate.css" rel="stylesheet" />
+                </head>
+    <body>
+        <header class="hide" id="hd_cabecera">
+            <span id="span_retroceder" class="hide"><</span>
+                <span id="span_eliminar_actividad" class=" trash hide"></span>
+                <h1 id="h1_cabecera">Control de Asistencia</h1>
+                <span id="span_fecha_general">06/10/2015</span>
+                </header>
+        <div id="contenedor_login" class="">
+            <form class="formulario_login">
+                <div>
+                    <label class="lbl_login" for="txt-usuario">Usuario</label>
+                    <input class="inp_login" type="text" id="txt_usuario" name="txt_usuario" />
+                    <label class="lbl_login" for="txt-clave">Contraseña</label>
+                    <input class="inp_login" id="txt_clave" name="txt_clave" type="password" />
+                    <input type="button" value="Aceptar" id="btn_login" class="btn_login" />
+                </div>
+            </form>
+            <div id="loader-login" class="hide"></div>
+        </div>
+        <div id="contenedor_general" class="contenedor_general hide">
+            <form class="" id="form_asistencia">
+                <label class="lb_tipo_asistencia">Tipo Asistencia</label>
+                <select class="select_tipo_asistencia" id="select_tipo_asistencia">
+                    <option value="Control">Control</option>
+                    <option value="Pegue">Pegue</option>
+                </select>
+                
+                <label class="lb_contratista">Supervisor</label>
+                <div class="contenedor_buscador">
+                    <input type="text" id="inp_contratista" />
+                    <ul class="hide" id="ul_contratista">
+                        <li class="li_buscador">1234 - Nombre Contratista 1</li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <label class="lb_capataz">Capataz</label>
+                <div class="contenedor_buscador">
+                    <input type="text"  id="inp_capataz" />
+                    <ul class="hide" id="ul_capataz">
+                        <li class="li_buscador">1234 - Nombre Capataz 1</li>
+                    </ul>
+                </div>
+                
+                <div class="contenedor_cuadrilla">
+                    <label class="lb_cuadrilla">Cuadrilla</label>
+                    <input type="text" class="inp_cuadrilla" id="inp_cuadrilla" maxlength="15" />
+                </div>
+                
+                <div class="contenedor_ruma">
+                    <label class="lb_ruma">Ruma</label>
+                        <!--<input type="number" class="inp_ruma" id="inp_ruma"  value="0" pattern="\d*"/>-->
+                        <input
+                            type = "number"
+                            id="inp_ruma"
+                            class="inp_ruma"
+                            maxlength = "10"
+                            value="0"
+                            pattern="\d*"
+                         />
+                </div>
+                
+                <label class="lb_empleado">Empleado</label>
+                <div class="contenedor_buscador">
+                    <input type="text" class="inp_empleado" id="inp_empleado" />
+                    <span id="lector-codigo"></span>
+                    <ul class="hide" id="ul_empleado">
+                        <li>
+                            330406 - Nombre del Empleado 1
+                        </li>
+                    </ul>
+                </div>
+                
+                
+                <div class="contenedor_botones">
+                    <input type="button" value="Nuevo" class="boton_agregar" id="btn_finalizar_asistencia" />
+                    <input type="button" value="Agregar" class="boton_agregar_inactivo" id="btn_agregar_asistencia"/>
+                </div>
+            </form>
+            <form class="hide" id="form_generales_apunte">
+                
+              <label class="lb_ordenServicio">Orden Servicio</label>
+                 <div class="contenedor_buscador">
+                  <input type="text" id="inp_ordenServicio" />
+                  <ul id="ul_ordenServicio" class="hide">
+                      <li>OS: 1819999994 | 15001 - Pellas... Cuadro:01</li>
+                  </ul>
+                </div>
+                
+                <div class="contenedor_plantio">
+                    <label class="lb_plantio">Plantio</label>
+                    <input type="text" id="inp_plantio" readonly/>
+                </div>
+                
+                <div class="contenedor_cuadro">
+                    <label class="lb_cuadro">Cuadro</label>
+                    <!--<input type="number" class="inp_cuadro" id="inp_cuadro" pattern="\d*" />-->
+                    <input type="text" id="inp_cuadro" class="inp_cuadro" readonly/>
+                </div>
+                
+                <div class="contenedor_actividad">
+                    <label class="lb_actividad">Actividad</label>
+                    <select id="sl_actividades">
+                    </select>
+                  
+                </div>
+                
+                <div class="contenedor_area_labor">
+                    <label class="lb_area_labor">Area labor</label>
+                    <!--<input type="number" class="inp_area_labor" id="inp_area_labor" />-->
+                    <input type="text" class="inp_area_labor" id="inp_area_labor" maxlength = "11" />
+                </div>
+                
+                <label class="lb_contratistaDGA">Supervisor</label>
+                <div class="contenedor_buscador ">
+                    <input type="text" id="inp_contratistaDGA" />
+                    <ul id="ul_contratistaDGA" class="hide">
+                        <li>1234 - Contratista 1</li>
+                        <li>1234 - Contratista 2</li>
+                        <li>1234 - Contratista 3</li>
+                        <li>1234 - Contratista 4</li>
+                    </ul>
+                </div>
+                
+                <div class="contenedor_capatazDGA">
+                    <label class="lb_capatazDGA">Capataz</label>
+                    <div class="contenedor_buscador">
+                        <input type="text" id="inp_capatazDGA" />
+                        <ul class="hide" id="ul_capatazDGA">
+                            <li>1234 - Capataz 1</li>
+                            <li>1234 - Capataz 2</li>
+                            <li>1234 - Capataz 3</li>
+                            <li>1234 - Capataz 4</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contenedor_cuadrillaDGA">
+                    <label class="lb_cuadrillaDGA">Cuadrilla</label>
+                    <input type="text" class="inp_cuadrillaDGA" id="inp_cuadrillaDGA" maxlength = "15"/>
+                </div>
+                
+                <label class="lb_observaciones">Observaciones</label>
+                <textarea class="txt_observaciones" id="txt_observaciones" maxlength = "255"></textarea>
+                
+                <div class="contenedor_botones">
+                    <input type="button" value="Nuevo" class="boton_agregar" id="btn_nueva_actividad" />
+                    <input type="button" value="Siguiente" class="boton_agregar_inactivo" id="btn_agregar_datos_generales" />
+                </div>
+            </form>
+            <form id="form_datos_empleados" class="hide">
+                
+                <div class="contenedor_empleadoDE">
+                    <label class="lb_empleadoDE">Empleado</label>
+                    <div class="contenedor_buscador">
+                        <input type="text" id="inp_empleadoDE" />
+                        <span id="lector-codigoDE"></span>
+                        <ul id="ul_empleadoDE" class="hide">
+                            <li>
+                                <h1>Nombre del Empleado 1</h1>
+                                <p>330406 | 081-150250-0007R</p>
+                            </li>
+                            <li>
+                                <h1>Nombre del Empleado 2</h1>
+                                <p>330406 | 081-150250-0007R</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contenedor_rumaDE">
+                    <label class="lb_rumaDE">Ruma</label>
+                    <input type="text" id="inp_rumaDE" class="inp_rumaDE" value="0" maxlength = "10" pattern="\d*" />
+                </div>
+                
+            
+                
+                
+                <label class="lb_cco">Centro Costo</label> <span class='lb_cambiar_inversion'>Cambiar a Inversion</span>
+                
+                <div class="contenedor_buscador">
+                    <input type="text" id="inp_cco"/>
+                    <ul class="hide" id="ul_cco">
+                        <li>1234 - CCO 1</li>
+                        <li>1234 - CCO 2</li>
+                        <li>1234 - CCO 3</li>
+                    </ul>
+                </div>
+                
+                <label class="lb_cc hide" >Cuenta Inversion</label> <span class='lb_cambiar_centro_costo hide' >Cambiar a Centro Costo</span>
+                <div class="contenedor_buscador hide">
+                    <input type="text" id="inp_cc" />
+                    <ul class="hide" id="ul_cc">
+                        <li>1234 - CC 1</li>
+                        <li>1234 - CC 2</li>
+                        <li>1234 - CC 3</li>
+                    </ul>
+                </div>
+                
+                <div class="contenedor_cantidad_labor">
+                    <label class="lb_cantidad_labor">Cantidad Labor</label>
+                    <input type="number" id="inp_cantidad_labor" class="inp_cantidad_labor" value="1"/>
+                </div>
+                
+                <div class="contenedor_cantidad_castigo">
+                    <label class="lb_cantidad_castigo">Cantidad Castigo</label>
+                    <input type="number" id="inp_cantidad_castigo" class="inp_cantidad_castigo" value="0" />
+                </div>
+                
+                <div class="contenedor_cantidad_pago">
+                    <label class="lb_cantidad_pago">Cantidad Pago</label>
+                    <input type="number" id="inp_cantidad_pago" class="inp_cantidad_pago" readonly="readonly" value="1"/>
+                </div>
+                
+                <div class="contendor_alimento">
+                    <label class="lb_alimento">Pagar Almuerzo</label>
+                    <input type="checkbox" id="inp_alimento" class="inp_alimento" readonly="readonly"/>
+                </div>
+                <div class="contenedor_empleadoDE" id="contenedor_unidad_produccion">
+                    <label class="lb_unidad_produccion">Unidad de Produccion</label>
+                    <div class="contenedor_buscador">
+                        <input type="text" id="inp_unidad_produccion" disabled class="inp_unidad_produccion"/>
+                        
+                    </div>
+                </div>
+                <div class="contenedor_cantidad_produccion">
+                    <label class="lb_cantidad_produccion">Cantidad</label>
+                    <input type="number" id="inp_cantidad_produccion" class="inp_cantidad_produccion" value="0" />
+                </div>
+                <div class="contenedor_botones">
+                    <input type="button" value="Finalizar" class="boton_agregar_inactivo" id="btn_finalizar_empleados" />
+                    <input type="button" value="Agregar" class="boton_agregar_inactivo" id="btn_agregar_empleados" />
+                </div>
+            </form>
+            <form id="form_reportes" class="hide">
+                <nav class="nav_tabreportes" id="nav_tabreportes">
+                    <ul>
+                        <li class="tab_selected" id="li_tabAsistencia">Asistencia</li>
+                        <li id="li_tabLabores">Ruma</li>
+                        <li id="li_tabApuntes">Apuntes</li>
+                    </ul>
+                </nav>
+                <div id="tabAsistencia" >
+                    <section class="encabezado_detalle">
+                        <article>
+                            <h2>Empleado</h2>
+                        </article>
+                        <article>
+                            <h2>Control</h2>
+                            <h2>Pegue</h2>
+                            <h2>Recibido</h2>
+                        </article>
+                    </section>
+                    <section class="cuerpo_detalle">
+                        <ul id="ul_detalle_asistencia">
+                            <li class="data_empleado">
+                                <p>Octavio Antonio Villanueva Zapata</p>
+                                <div>
+                                    <span class="checked"></span>
+                                    <span class="unchecked"></span>
+                                    <span class="checked"></span>
+                                </div>
+                            </li>
+                            <li class="data_empleado">
+                                <p>Gema Patricia Cortez Marenco</p>
+                                <div>
+                                    <span class="unchecked"></span>
+                                    <span class="checked"></span>
+                                    <span class="checked"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <footer>
+                        <label class="concepto">Total</label>
+                        <label class="montos" id="lb_total_recibido">0</label>
+                        <label class="montos" id="lb_total_pegue">0</label>
+                        <label class="montos" id="lb_total_control">0</label>
+                    </footer>
+                </div>
+                <div id="tabLabores" class="hide">
+                    <ul id="ul_ruma_reporte">
+                        <li class="li_ruma">
+                            <div class="cabecera_ruma plegada">
+                                <label>R15</label>
+                                <label>320</label>
+                            </div>
+                            <div class="detalle_ruma">
+                                <div class="cabecera_detalle_ruma">
+                                    <label class="lb_col_capataz">Capataz</label>
+                                    <label class="lb_col_promedio">Promedio</label>
+                                    <label class="lb_col_empleados">Empleados</label>
+                                    <label class="lb_col_total">Total</label>
+                                </div>
+                                <ul class="ul_detalle_ruma">
+                                    <li>
+                                        <div class="col_izquierda">
+                                            <p class="p_capataz_cuadrilla">Q15-C001</p>
+                                            <small class="small_contratista">00351239</small>
+                                        </div>
+                                        <div class="col_derecha">
+                                            <label class="lb_col_promedio">30</label>
+                                            <label class="lb_col_empleados">02</label>
+                                            <label class="lb_col_total">60</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tabApuntes" class="hide">
+                    <ul class="lista_apunte" id="lista_apunte">
+                        <li>
+                            <div class="cabecera_apunte plegada">
+                                <p>SER142-Alce manual de semilla</p>
+                            </div>
+                            <ul class="detalle_apunte">
+                                <li>
+                                    <div class="col_izquierda">
+                                        <p class="p_empleado">Edwin Dolores Najeras Ulloa</p>
+                                        <small class="small_fichaEmpleado">00100023</small>
+                                    </div>
+                                    <div class="col_derecha">
+                                        <label class="cantidad_labor">25</label>
+                                        <span class="btn_editarApunte"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+            <form id="form_configuraciones" class="hide">
+                <label class="lb_fecha_general hide">Fecha del sistema</label>
+                <input type="date" id="inp_fecha_general" class="inp_fecha_general hide"/>
+                <input type="button" class="botones_configuracion" value="Sincronizar Maestros" id="btn_sincronizar_maestros"/>
+                <input type="button" class="botones_configuracion" value="Enviar Apuntes" id="btn_enviar_apuntes"/>
+                <input type="button" class="botones_configuracion" value="Cerrar Sesion" id="btn_cerrar_session"/>
+                <small class='modulo_app'>Modulo: No Definido</small>
+                <small class='scanner_info'>Scanner: No Definido </small>
+                <small class='asisten_info'>Asistencia: No Definido</small>
+                <small class='dispositivo_id'>Dispositivo</small>
+                <small class='version_app'>Version 2.9</small>
+              
+                
+                <a id='link_actualizacion' class='estado_actualizacion'>La aplicaci&oacute;n esta actualizada.</a>
+                <small class='usuario_logeado'></small>
+                <small class='app_ambiente'></small>
+            </form>
+        </div>
+        <div id="block_screen" class="hide">
+            <h1 id="titulo_barra_progreso" class="titulo_barra_progreso">Sincronizando...</h1>
+            <div id="contenedor_barra_progreso" class="hide">
+                <div id="barra_progreso">
+                    <h2 id="porcentaje" class="porcentaje_progreso">0%</h2>
+                    <div id="progreso"></div>
+                </div>
+            </div>
+        </div>
+        <nav class="hide" id="nav_botones">
+            <ul>
+                <li class="nav_botones nav_asistencias_active" id="nav_asistencias"><a href="#">Asistencia</a></li>
+                <li class="nav_botones nav_actividades_inactive" id="nav_actividades"><a href="#">Labores</a></li>
+                <li class="nav_botones nav_reportes_inactive" id="nav_reportes"><a href="#">Reportes</a></li>
+                <li class="nav_botones nav_configuraciones_inactive" id="nav_configuraciones"><a href="#">Configuraci&oacute;n</a></li>
+                
+            </ul>
+            
+        </nav>
+        <!-- Cordova reference, this is added to your app when it's built. -->
+        <script src="cordova.js"></script>
+        <script src="js/platformOverrides.js"></script>
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/CryptoJS.js"></script>
+        <script src="js/funciones.js"></script>
+        <script src="js/db_labores.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

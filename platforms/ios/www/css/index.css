@@ -1,0 +1,1262 @@
+/**********Estilos generales**************/
+*
+{
+    color: #085239;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/*Scroll bar*/
+::-webkit-scrollbar{
+    height:3px;
+    width:3px;
+}
+::-webkit-scrollbar-thumb{
+    background: #cecece;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+    
+}
+input[type=text], input[type=number], input[type=date], input[type=password],textarea
+{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    border:1px solid #e6e6e6;
+    -webkit-overflow-scrolling:touch;
+    overflow:hidden;
+    -webkit-transform: translate3d(0,0,0);
+    font-size:14px;
+    
+}
+*:not(input):not(textarea) {
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+}
+select
+{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    background: url(../images/Iconoflecha.png) no-repeat 95% center;
+    font-size:14px;
+}
+
+label{
+    font-size:14px;
+    color:#373737;
+}
+
+/****input Fecha***/
+::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+}
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+html {
+    font-family:Helvetica;
+}
+
+/************Cabecera formularios**************/
+header
+{
+    
+    width:100vw;
+    height:10vh;
+    line-height:10vh;
+    margin-bottom:5%;
+    text-align:center;
+    box-shadow: 0 3px 8px rgba(0, 0, 1, .39);
+    
+}
+header > h1
+{
+    font-size:1.2em;
+    display:inline-block;
+    color:#fff;
+}
+header > span:nth-child(1)
+{
+    display:inline-block;
+    float:left;
+    margin-left:5%;
+    width:10%;
+    height:100%;
+}
+.trash{
+    background:url(../images/ICN_trash.png) center center no-repeat;
+    display:inline-block;
+    float:left;
+    margin-left:5%;
+    width:10%;
+    height:100%;
+}
+header  > span:nth-child(4)
+{
+    display:inline-block;
+    float:right;
+    margin-right:5%;
+    color:#fff;
+    font-size:0.8em
+}
+
+/***********Botones navegacion************/
+#nav_botones
+{
+    width:100vw;
+    height:10vh;
+    text-align:center;
+    border-top:1px solid #cbcbcb;
+    background-color:#F7F6F6;
+}
+#nav_botones > ul
+{
+    width:100%;
+    height:100%;
+}
+#nav_botones  > ul > li > a{
+    text-decoration: none;
+    font-size: 0.6em;
+    color: #676767;
+    margin-top: 53%;
+    display: inline-block;
+}
+.nav_botones
+{
+    width:23%;
+    border-radius:15px;
+    display:inline-block;
+    height:100%;
+}
+.nav_asistencias_active{
+    background:url(../images/ICN_Asistencia_Selected.png) center 25% no-repeat;
+    background-size:25px;
+}
+.nav_asistencias_active > a{
+    color: #55B647;
+}
+.nav_asistencias_inactive{
+    background:url(../images/ICN_Asistencia.png) center 25% no-repeat;
+    background-size:25px;
+}
+.nav_actividades_active
+{
+    background:url(../images/ICN_Actividades_Selected.png) center 25%  no-repeat;
+    background-size:25px;
+}
+.nav_actividades_active > a{
+    color: #55B647;
+}
+.nav_actividades_inactive{
+    background:url(../images/ICN_Actividades.png) center 25% no-repeat;
+    background-size:25px;
+}
+.nav_reportes_active{
+    background:url(../images/ICN_Reporte_Selected.png) center 25% no-repeat;
+    background-size:25px;
+}
+.nav_reportes_active > a{
+    color: #55B647;
+}
+.nav_reportes_inactive{
+    background:url(../images/ICN_Reporte.png) center 25% no-repeat;
+    background-size:25px;
+}
+.nav_configuraciones_active
+{
+    background:url(../images/ICN_Ajustes_Selected.png) center 25% no-repeat;
+    background-size:25px;
+}
+.nav_configuraciones_active > a{
+    color: #55B647;
+}
+.nav_configuraciones_inactive
+{
+    background:url(../images/ICN_Ajustes.png) center 25% no-repeat;
+    background-size:25px;
+}
+
+.contenedor_general
+{
+    width:100vw;
+    height:77vh;
+    text-align:center;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling:touch;
+}
+.contenedor_general > form
+{
+    width:90%;
+    height:100vh;
+    text-align:center;
+    display:inline-block;
+    position:relative;
+}
+/***********************Login********************/
+#loader-login {
+    position: absolute;
+    top: 30vh;
+    left: 45vw;
+    height: 34px;
+    width: 35px;
+    background: url(../images/circle_loader.gif) no-repeat center;
+    background-size: 32px;
+}
+#contenedor_login{
+    height:100vh;
+    width:100vw;
+    background:url("../images/BK2-01.png") no-repeat;
+    background-size:cover;
+}
+.formulario_login{
+    
+    background: url(../images/Logo_intro_430px_165px-01.svg) no-repeat center 5vh,#fff;
+    height: 45vh;
+    width: 80vw;
+    margin: 0 auto;
+    top: 10vh;
+    position: relative;
+    padding-top: 20vh;
+    background-size: 52%, cover;
+    
+}
+.formulario_login>div
+{
+    height:100%;
+    width:100%;
+}
+.lbl_login{
+    text-align: left;
+    display: block;
+    color: #676767;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 4%;
+    font-size:1.8em;
+    
+}
+.inp_login{
+    display: block;
+    border-radius: 0;
+    color: #94c948;
+    border: 1px solid #e6e6e6;
+    -webkit-box-shadow: none;
+    margin: 0 auto;
+    width: 90%;
+    font-size:2em;
+    padding: 0;
+    margin-bottom: 5%;
+    min-height: 30px;
+    -webkit-appearance: none;
+    text-indent:2vw;
+    height: 15%;
+}
+.btn_login{
+    width: 50vw;
+    display: block;
+    margin: 0 auto;
+    height: 18%;
+    -webkit-appearance: none;
+    color: #cbcbcb;
+    font-size: 1.8em;
+    margin-top: 9%;
+    box-shadow:none !important;
+    background-color: #e6e6e6;
+    border:1px solid #e6e6e6;
+}
+.btn_login_activo{
+    color: white;
+    box-shadow: 0 4px 6px- rgba(0,0,0,.2);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6ac949), color-stop(100%,#55b647));
+    border:1px solid #50b841;
+}
+.btn_login_inactivo{
+    color: #cbcbcb;
+    border:1px solid #e6e6e6;
+    background-color: #e6e6e6;
+    box-shadow:none !important;
+    
+}
+/******************Asistencia**************************/
+
+#hd_cabecera{
+    background: #55B647;
+    color: white;
+}
+
+.lb_tipo_asistencia, .lb_contratista, .lb_capataz,.lb_empleado
+{
+    width:100%;
+    text-align:left;
+    display:inline-block;
+    margin:5% 0 5% 0;
+    clear:both;
+    color:#373737;
+    font-size:14px;
+}
+.select_tipo_asistencia, .inp_contratista, .inp_capataz, .inp_empleado
+{
+    width:100%;
+    height:7%;
+    border: 1px solid #e6e6e6;
+    padding:0;
+    text-indent:5%;
+}
+.contenedor_cuadrilla
+{
+    margin-top:5%;
+    float:left;
+    width:45%;
+    height:12%;
+}
+.lb_cuadrilla, .lb_ruma
+{
+    width:100%;
+    text-align:left;
+    display:inline-block;
+    margin:0% 0 10% 0;
+    color:#373737;
+    font-size:14px;
+}
+.inp_cuadrilla, .inp_ruma
+{
+    width:100%;
+    height:58%;
+    border: 1px solid #e6e6e6;
+    padding:0;
+    text-indent:5%;
+}
+.contenedor_ruma
+{
+    margin-top:5%;
+    float:right;
+    width:45%;
+    height:12%;
+}
+.inp_empleado
+{
+    width:100%;
+    height:80%;
+}
+.buscador_empleado
+{
+    min-height:6vh;
+    max-height:20vh;
+    overflow:hidden;
+    width:100%;
+}
+.buscador_empleado > li
+{
+    width:100%;
+    height:6vh;
+    list-style:none;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/***************Datos generales apunte*****************/
+.contenedor_plantio, .contenedor_actividad, .contenedor_capatazDGA
+{
+    width:70%;
+    height:12%;
+    float:left;
+    margin-top:5%;
+    text-align:left;
+}
+.lb_plantio, .lb_area_labor, .lb_cuadro, .lb_actividad,
+.lb_cuadrillaDGA, .lb_capatazDGA
+{
+    width:100%;
+    text-align:left;
+}
+.lb_contratistaDGA, .lb_observaciones, .lb_ordenServicio
+{
+    width:100%;
+    text-align:left;
+    display:inline-block;
+    margin:5% 0 5% 0;
+    
+}
+.inp_cuadro, .inp_actividad,
+.inp_area_labor, .inp_cuadrillaDGA, .inp_capatazDGA
+{
+    width:100%;
+    height:58%;
+    border: 1px solid #e6e6e6;
+    padding:0;
+    text-indent:10%;
+    margin:2vh 0 0 0;
+}
+.contenedor_plantio > .contenedor_buscador, .contenedor_actividad > .contenedor_buscador, .contenedor_capatazDGA > .contenedor_buscador
+{
+    height:58%;
+    margin:2vh  0 0 0 ;
+}
+.contenedor_cuadro, .contenedor_area_labor, .contenedor_cuadrillaDGA
+{
+    width:25%;
+    height:12%;
+    float:right;
+    margin-top:5%;
+    text-align:left;
+}
+.txt_observaciones{
+    width:100%;
+    height:10%;
+    border: 1px solid #e6e6e6;
+    padding:0;
+    text-indent:2%;
+}
+
+/***************Datos empleado*****************/
+.contenedor_empleadoDE
+{
+    width:70%;
+    height:12%;
+    float:left;
+    margin-top:5%;
+    text-align:left;
+}
+
+.contendor_unidad_produccion
+{
+    width:70%;
+    height:12%;
+    float:left;
+    margin-top:5%;
+    text-align:left;
+}
+
+.contenedor_empleadoDE > .contenedor_buscador
+{
+    height:58%;
+    margin:2vh  0 0 0 ;
+}
+
+.contendor_unidad_produccion > .contenedor_buscador
+{
+    height:58%;
+    margin:2vh  0 0 0 ;
+}
+
+.contenedor_rumaDE, .contenedor_cantidad_produccion
+{
+    width:25%;
+    height:12%;
+    float:right;
+    margin-top:5%;
+    text-align:left;
+}
+.inp_rumaDE, .inp_cantidad_pago, .inp_cantidad_castigo, .inp_cantidad_labor, .inp_cantidad_pago, .inp_cantidad_produccion
+{
+    width:100%;
+    height:58%;
+    border: 1px solid #e6e6e6;
+    padding:0;
+    text-indent:5%;
+    margin:2vh 0 0 0;
+}
+.lb_cco, .lb_cc
+{
+    width:50%;
+    text-align:left;
+    display:inline-block;
+    margin:5% 0 5% 0;
+    clear:both;
+}
+
+.lb_cambiar_centro_costo, .lb_cambiar_inversion{
+ text-decoration: underline;display:inline-block;width:48%;font-size:11px;
+}
+
+.contendor_paga_inversion{
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    vertical-align: middle;
+}
+.lb_inversion{
+    display: inline-block;
+}
+.inp_inversion{
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+}
+
+
+.contenedor_cantidad_labor, .contenedor_cantidad_pago
+{
+    width:45%;
+    height:12%;
+    float:left;
+    margin-top:5%;
+    text-align:left;
+}
+.contenedor_cantidad_castigo, .contendor_alimento
+{
+    width:45%;
+    height:12%;
+    float:right;
+    margin-top:5%;
+    text-align:left;
+    position:relative;
+}
+.inp_alimento{
+    position:absolute;
+    top:50%;
+    left:35%;
+    height:4vh;
+    width:15vw;
+}
+
+/*******************Reportes**********************/
+/*Reporte Asistencia*/
+#form_reportes{
+    height:65vh;
+}
+.nav_tabreportes {
+    width:100%;
+    display:inline-block;
+    border:1px solid #55B647;
+    border-radius:5px;
+    margin-bottom:5%;
+}
+.nav_tabreportes > ul >li{
+    float:left;
+    width:33.1%;
+    padding:4.5% 0 4.5% 0;
+    color:#55B647;
+    font-size:0.9em;
+}
+.nav_tabreportes > ul >li:nth-child(1)
+{
+    border-right:1px solid #55B647;
+}
+.nav_tabreportes > ul >li:nth-child(2)
+{
+    border-right:1px solid #55B647;
+}
+.tab_selected{
+    color:#fff !important;
+    background-color:#55B647;
+}
+.titulo_detalle_Asistencia
+{
+    height: 6vh;
+    line-height: 6vh;
+    text-align: center;
+    font-size: 1.4em;
+    text-indent: 2vw;
+    margin-top: 4vh;
+    width: 90%;
+    display: inline-block;
+}
+.titulo_detalle_Asistencia > h2:nth-child(1)
+{
+    float:left;
+    width:60%;
+}
+.titulo_detalle_Asistencia > h2:nth-child(2)
+{
+    float:right;
+    width:39%;
+    color: #92C842;
+}
+.encabezado_detalle
+{
+    width: 100%;
+    display: inline-block;
+    height: 6vh;
+    /*font-size: 1.10em;*/
+    background-color: #f9f9f9;
+}
+.encabezado_detalle > article:nth-child(1)
+{
+    float: left;
+    width: 35%;
+    text-align: left;
+    padding: 3% 0 3% 0;
+}
+.encabezado_detalle > article:nth-child(1) > h2
+{
+    /*padding-left:5vw;*/
+}
+.encabezado_detalle > article:nth-child(2)
+{
+    float: right;
+    width: 60%;
+    padding: 3% 0 3% 0;
+}
+.encabezado_detalle > article:nth-child(2) > h2{
+    display:inline-block;
+}
+.encabezado_detalle > article:nth-child(2) > h2:nth-child(1)
+{
+    /*margin-right:5%;*/
+}
+.cuerpo_detalle {
+    background-color: #fff;
+    width: 100%;
+    display: inline-block;
+    /*font-size: 1.35em;*/
+}
+.cuerpo_detalle > ul{
+    height: 52vh;
+    overflow-y: auto;
+}
+.data_empleado
+{
+    width: 100%;
+    height: 8vh;
+    border-bottom: 1px solid #cbcbcb;
+    position:relative;
+    /*line-height: 6vh;*/
+    /*/*font-size:1.35em*/
+}
+.data_empleado > div.col_dataEmpleado
+{
+    float: left;
+    width: 35%;
+    height:8vh;
+    text-align:left;
+    vertical-align:middle;
+    position:absolute;
+    top:10%;
+}
+.data_empleado > div.col_dataEmpleado > p {
+    width: 100%;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    /*float: left;*/
+    /*vertical-align: text-bottom;*/
+    /*height:6vh;
+     line-height:6vh;*/
+    /*padding-left: 5vw;*/
+    
+}
+.data_empleado > div.col_dataEmpleado > small
+{
+    font-size:12px;
+    color:#cbcbcb;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    display:inline-block;
+}
+.data_empleado > div.col_checkboxs {
+    width: 55%;
+    float: right;
+    text-align: center;
+    height:100%;
+}
+.data_empleado div > span {
+    width: 5vh;
+    height: 6vh;
+    display: inline-block;
+    margin-right: 15%;
+}
+.data_empleado div > span:nth-child(1)
+{
+    margin-right: 15%;
+}
+.checked
+{
+    background: url(../images/ICN_Presente.png) center center no-repeat;
+}
+.unchecked{
+    background: url(../images/ICN_Ausente.png) center center no-repeat;
+}
+footer
+{
+    background-color: #f9f9f9;
+    line-height:6vh;
+    height:6vh;
+}
+footer > .montos
+{
+    float:right;
+    margin-right:14%;
+    color: #085239;
+    font-size:1em;
+}
+footer > .concepto
+{
+    float:left;
+    color: #085239;
+    font-size:1em;
+}
+/*Reporte Labores*/
+#ul_ruma_reporte
+{
+    height:55vh;
+    overflow:auto;
+}
+#ul_ruma_reporte > li
+{
+    margin-bottom:1%;
+}
+.cabecera_ruma
+{
+    width:100%;
+    height:6vh;
+    line-height:6vh;
+}
+.desplegada
+{
+    background: #f7f7f7 url(../images/ICN_arrow_down.svg) 95% center no-repeat;
+}
+.plegada
+{
+    background:#f7f7f7 url(../images/ICN_arrow_up.svg) 95% center no-repeat;
+}
+.cabecera_ruma > label
+{
+    color:#55B647;
+}
+.cabecera_ruma > label:nth-child(1)
+{
+    float:left;
+    margin-left:5%;
+    text-align:left;
+}
+.cabecera_ruma > label:nth-child(2)
+{
+    float:right;
+    margin-right:12%;
+    text-align:right;
+}
+.detalle_ruma
+{
+    width:100%;
+}
+.cabecera_detalle_ruma
+{
+    width:100%;
+    height:6vh;
+    margin-top:5%;
+    line-height:6vh;
+}
+.cabecera_detalle_ruma > label
+{
+    color:#55B647;
+    float:left;
+}
+.ul_detalle_ruma > li {
+    height:8vh;
+    border-bottom:1px solid #cbcbcb;
+}
+.ul_detalle_ruma > li > .col_izquierda
+{
+    float:left;
+    width:25vw;
+    margin-top:2.5%;
+}
+.ul_detalle_ruma > li > .col_derecha
+{
+    float:right;
+    height:100%;
+    width:64vw;
+}
+.p_capataz_cuadrilla
+{
+    font-size:14px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+.small_contratista
+{
+    font-size:12px;
+    color:#cbcbcb;
+}
+.ul_detalle_ruma > li > .col_derecha > label
+{
+    float:left;
+    line-height:8vh;
+    color:#085239;
+}
+.lb_col_capataz {
+    width:25vw;
+}
+.lb_col_promedio {
+    width:25vw;
+}
+.lb_col_empleados {
+    width:25vw;
+}
+.lb_col_total {
+    width:10vw;
+}
+
+
+/*Reporte Apuntes*/
+.lista_apunte
+{
+    height:60vh;
+    overflow:auto;
+}
+.cabecera_apunte
+{
+    width:100%;
+    height:6vh;
+    line-height:6vh;
+    text-align:left;
+    text-indent:5%;
+}
+.cabecera_apunte > p{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    width:60%;
+    float:left;
+    text-align:left;
+    
+}
+.cabecera_apunte > label
+{
+    float:right;
+    margin-right:12%;
+    text-align:right;
+    color: #085239;
+}
+.detalle_apunte > li
+{
+    width:100%;
+    height:8vh;
+    border-bottom:1px solid #cbcbcb;
+}
+.detalle_apunte > li > .col_izquierda
+{
+    width:60%;
+    float:left;
+    text-indent:5%;
+    text-align:left;
+    margin-top:2.5%;
+}
+.p_empleado {
+    font-size:14px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.small_fichaEmpleado
+{
+    font-size:12px;
+    color:#cbcbcb;
+    display:inline-block;
+}
+.detalle_apunte > li > .col_derecha
+{
+    float:right;
+    line-height:8vh;
+    width:30%;
+}
+.cantidad_labor
+{
+    float:right;
+    margin-right:5%;
+}
+.btn_editarApunte
+{
+    background: url(../images/BTN_Editar.png) center center no-repeat;
+    width:10vw;
+    height:8vh;
+    background-size:22px;
+    float:right;
+    z-index:1000;
+}
+.castigo{
+    color:#ef5341;
+}
+
+/**************Block-screen**************/
+#block_screen {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 150;
+    background-color: #fff;
+    top: 0;
+    opacity: 0.8;
+}
+#contenedor_barra_progreso
+{
+    position: absolute;
+    top: 45vh;
+    left: 10vw;
+    width: 80vw;
+    text-align: center;
+}
+#barra_progreso {
+    width: 100%;
+    height: 3.4vh;
+    color: #cbcbcb;
+    background-color: #f2f2f2;
+    line-height: 3.4vh;
+}
+.titulo_barra_progreso {
+    display: block;
+    font-size: 1.6em;
+    text-align: center;
+    color: #cbcbcb;
+    position: relative;
+    top: 42%;
+    margin: 0 auto;
+}
+.porcentaje_progreso
+{
+    font-size: 1.25em;
+    color: #cbcbcb;
+    height: 3.4vh;
+    position: absolute;
+    left: 47%;
+}
+#progreso
+{
+    height:3.4vh;
+    width:0;
+}
+.blur-fondo{
+    -webkit-transform: translateZ(0);
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.boton_agregar
+{
+    color: #FFF;
+    width:48%;
+    height:50%;
+    clear:both;
+    position:relative;
+    background-image: -webkit-linear-gradient(top, #6AC949, #55B647);
+    background-image: -moz-linear-gradient(top, #6AC949, #55B647);
+    background-image: -o-linear-gradient(top, #6AC949, #55B647);
+    background-image: linear-gradient(to bottom, #6AC949 0%, #55B647 100%);
+    box-shadow:0 3px 8px #cbcbcb;
+    border:1px solid #50b841;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.boton_agregar_inactivo {
+    width:48%;
+    height:50%;
+    clear:both;
+    position:relative;
+    background-image: -webkit-linear-gradient(top, #e6e6e6, #e6e6e6);
+    color: #cbcbcb;
+    border: 1px solid #e6e6e6;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-shadow:none !important;
+    border-radius: 6px !important;
+    font-size: 16px;
+}
+.boton_finalizar
+{
+    color: #FFF;
+    width:48%;
+    height:50%;
+    clear:both;
+    position:relative;
+    background-image: -webkit-linear-gradient(top, #6AC949, #55B647);
+    background-image: -moz-linear-gradient(top, #6AC949, #55B647);
+    background-image: -o-linear-gradient(top, #6AC949, #55B647);
+    background-image: linear-gradient(to bottom, #6AC949 0%, #55B647 100%);
+    box-shadow:0 3px 8px #cbcbcb;
+    border:1px solid #50b841;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.hide
+{
+    display:none !important;
+}
+.loading{
+    background-image:url("../images/loader.gif") !important;
+    background-position:95% center;
+    background-repeat:no-repeat;
+    background-size:30px;
+}
+.contenedor_buscador
+{
+    position:relative;
+    width:100%;
+    height:7%;
+    border: 1px solid #e6e6e6;
+}
+.contenedor_buscador > input[type="text"]
+{
+    width:80%;
+    height:100%;
+    padding:0 20% 0 0;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display:inline-block;
+    text-indent:5%;
+    border:0px;
+    background: #fff url("../images/Search_48px_48px.svg")  no-repeat 95% center;
+    
+}
+.contenedor_buscador > #inp_empleado, .contenedor_buscador > #inp_empleadoDE{
+    width:80%;
+    float:left;
+    background:none;
+    padding:0;
+}
+.contenedor_buscador > span
+{
+    background: url(../images/ICN_CodigoBarras.png) no-repeat center center;
+    width: 10%;
+    height: 100%;
+    display:inline-block;
+    padding-right:8%;
+    float:right;
+    
+}
+.contenedor_buscador > ul
+{
+    min-height:7%;
+    max-height:25vh;
+    width:100%;
+    border: 1px solid #e6e6e6;
+    overflow:auto;
+    display:inline-block;
+    z-index:60;
+    position:absolute;
+    top:100%;
+    left:0;
+    padding:0;
+    background-color:#fff;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.contenedor_buscador > ul > li
+{
+    list-style:none;
+    text-align:left;
+    padding: 5% 0 5% 0;
+    border-bottom: 1px solid #E6E6E6;
+}
+.contenedor_buscador > ul > div
+{
+    padding:5% 0 5% 0;
+    text-align:center;
+}
+.contenedor_buscador > ul > li> h1{
+    font-size: 1.4em;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    width:100%;
+}
+.contenedor_buscador > ul > li> p{
+    color: #6AC949;
+    font-size:1.4em;
+}
+.contenedor_buscador > ul > li:hover
+{
+    background-color:#F2F2F2;
+}
+.contenedor_buscador > ul > li:active
+{
+    background-color:#F2F2F2;
+}
+/************Configuraciones************/
+.lb_fecha_general
+{
+    width:70%;
+    text-align:left;
+    display:inline-block;
+    margin-bottom:2%;
+}
+.inp_fecha_general
+{
+    width:70%;
+    height:6vh;
+    margin-bottom:5%;
+    background: url("../images/ICN_Calendario2.png") no-repeat 95% center;
+    text-indent:5%;
+}
+.contenedor_botones
+{
+    width:100%;
+    /*background-color: #f7f7f7;*/
+    height:12vh;
+    line-height:12vh;
+    position:absolute;
+    bottom:0;
+}
+.boton_configuracion
+{
+    color: #FFF;
+    width:70%;
+    height:50px;
+    clear:both;
+    position:relative;
+    background-image: -webkit-linear-gradient(top, #00ACEC, #008FC5);
+    background-image: -moz-linear-gradient(top, #00ACEC, #008FC5);
+    background-image: -o-linear-gradient(top, #00ACEC, #008FC5);
+    background-image: linear-gradient(to bottom, #00ACEC 0%, #008FC5 100%);
+    box-shadow:0 3px 8px #cbcbcb;
+    border:1px solid #008FC5;
+    border-radius: 6px;
+    font-size: 0.8em;
+}
+.botones_configuracion
+{
+    color: #FFF;
+    width:70%;
+    height:50px;
+    clear:both;
+    position:relative;
+    background-image: -webkit-linear-gradient(top, #00ACEC, #008FC5);
+    background-image: -moz-linear-gradient(top, #00ACEC, #008FC5);
+    background-image: -o-linear-gradient(top, #00ACEC, #008FC5);
+    background-image: linear-gradient(to bottom, #00ACEC 0%, #008FC5 100%);
+    box-shadow:0 3px 8px #cbcbcb;
+    border:1px solid #008FC5;
+    border-radius: 6px;
+    font-size: 0.8em;
+    margin-bottom:5vh;
+}
+#form_configuraciones
+{
+    height:65vh;
+}
+/* Pantallas con la equivalencia de pixel Alta densidad*/
+@media screen and (-webkit-device-pixel-ratio: 2)
+{
+    .lbl_login{
+        font-size:0.9em;
+    }
+    
+    .inp_login{
+        font-size:1em;
+    }
+    
+    .btn_login{
+        font-size: 0.9em;
+        
+    }
+    .titulo_barra_progreso {
+        font-size: 1.05em;
+    }
+    select
+    {
+        background-size:10px 6px;
+    }
+    .porcentaje_progreso
+    {
+        font-size:0.8em;
+    }
+    .contenedor_buscador > ul > li> h1
+    {
+        font-size: 0.7em;
+    }
+    .contenedor_buscador > ul > li> p{
+        font-size:0.7em;
+    }
+    .contenedor_buscador > span
+    {
+        background-size:16px;
+    }
+    .contenedor_buscador > input[type="text"]
+    {
+        background-size:24px;
+    }
+    .contenedor_buscador > ul
+    {
+        left:-1px;
+    }
+    .checked
+    {
+        background-size:19px 16px;
+    }
+    .unchecked{
+        background-size:16px 16px;
+    }
+    .cabecera_ruma, .cabecera_apunte
+    {
+        background-size:16px;
+    }
+}
+
+.version_app{
+    color: #999;
+    font-size: 0.9em;
+    display: block;
+}
+.dispositivo_id{
+    color: #999;
+    font-size: 0.6em;
+    display: block;
+      margin-bottom:10px;
+}
+.modulo_app{
+    color: #00acec;
+    font-size: 0.8em;
+    display: block;
+    margin-bottom:5px;
+}
+.scanner_info,.asisten_info{
+    color: #999;
+    font-size: 0.4em;
+    display: block;
+    margin-bottom:5px;
+
+}
+.usuario_logeado{
+    color: #999;
+    font-size: 0.9em;
+    display: block;
+}
+.estado_actualizacion{
+    text-decoration: none;
+    font-size: 0.7em;
+    color: #c2c2c2;
+    margin-top:5px;
+}
+
+.estado_actualizacion_pendiente{
+    text-decoration: underline;
+    font-size: 0.7em;
+    color: #00acec;
+}
+
+.app_ambiente{
+    color:red;
+}
+
+
+#inp_unidad_produccion{
+    background:none;
+}
+
+#inp_plantio,#inp_cuadro{
+    border: none !important;
+    background: #F9F9F9;
+    font-size: 0.7em;
+    margin: 2vh 0 0 0;
+    height: 58%;
+}
+
+
+.contenedor_plantio,.contenedor_cuadro{
+    width:45%
+}
+#sl_actividades{
+    display: block;
+    margin-top: 2vh;
+    height: 58%;
+    border: 1px solid #e6e6e6;
+    width: 100%;
+}
